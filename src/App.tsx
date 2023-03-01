@@ -1,12 +1,11 @@
-import React from "react";
-import "./App.css";
-import { URLShortener } from "./components/URLShortner/URLShortner";
+import "./App.scss";
+import { URLShortener } from "./components/URLShortener/URLShortener";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>URL Shortner</h1>
+        <h1>URL Shortener App</h1>
       </header>
       <main>
         <URLShortener />

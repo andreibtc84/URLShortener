@@ -1,0 +1,16 @@
+.App {
+  background-color: whitesmoke;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
+  font-size: calc(10px + 2vmin);
+  color: black;
+  min-height: 100vh;
+
+  main {
+    width: 100%;
+  }
+}
