@@ -2,7 +2,10 @@ import React, { useState, useEffect } from "react";
 import "./URLShortener.scss";
 
 //Defines a custom type to represent a recently shortened URL as a string.
-type RecentlyShortenedURL = string;
+type RecentlyShortenedURL = {
+  fullUrl: string;
+  shortUrl: string;
+};
 
 export const URLShortener: React.FC = (): JSX.Element => {
   const [inputURL, setInputURL] = useState("");
@@ -44,7 +47,7 @@ export const URLShortener: React.FC = (): JSX.Element => {
       setShortenedURL(data.shortUrl);
 
       const updatedRecentlyShortenedURLs = [
-        data.shortUrl,
+        { fullUrl: inputURL, shortUrl: data.shortUrl },
         ...recentlyShortenedURLs.slice(0, 4)
       ];
       setRecentlyShortenedURLs(updatedRecentlyShortenedURLs);
@@ -66,10 +69,10 @@ export const URLShortener: React.FC = (): JSX.Element => {
   const renderRecentlyShortenedURLs = () => {
     return recentlyShortenedURLs.map((url, index) => (
       <li key={index}>
-        <a href={url} target="_blank" rel="noopener noreferrer">
-          {url}
+        <a href={url.shortUrl} target="_blank" rel="noopener noreferrer">
+          {url.shortUrl}
         </a>
-        <p>{inputURL}</p>
+        <p>{url.fullUrl}</p>
       </li>
     ));
   };
