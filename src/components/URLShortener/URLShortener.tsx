@@ -96,7 +96,7 @@ export const URLShortener: React.FC = (): JSX.Element => {
             placeholder="Please enter URL to shorten"
             required
           />
-          <button className="submitButton" type="submit">
+          <button className="submitButton" type="submit" aria-label="Submit">
             SUBMIT
           </button>
         </form>
