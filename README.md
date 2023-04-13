@@ -16,7 +16,7 @@ The renderRecentlyShortenedURLs function maps the recentlyShortenedURLs array to
 
 Overall, the code uses React hooks to manage state and side effects, makes API calls to an external service to shorten URLs, and uses local storage to store and retrieve recently shortened URLs.
 
-# Teck stack:
+# Tech stack:
 
 - React.js
 - Typescript
